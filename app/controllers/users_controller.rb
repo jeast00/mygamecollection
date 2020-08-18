@@ -27,4 +27,9 @@ class UsersController < ApplicationController
     end
   end
 
+  #get request to log out the user
+  get '/logout' do
+    session.clear
+    redirect :'/'
+  end
 end
