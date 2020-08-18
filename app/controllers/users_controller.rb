@@ -17,5 +17,14 @@ class UsersController < ApplicationController
   end
 
   #post login welcome back user and have user click to go to their account
+  post '/sessions' do
+    @user = User.find_by(email: params[:email])
+    if @user && @user.authenticate(params[:password])
+      session[:user_id] = @user.id
+      erb :'welcome_back_user'
+    else
+      erb :'login_error'
+    end
+  end
 
 end
