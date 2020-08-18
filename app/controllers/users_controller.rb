@@ -5,7 +5,11 @@ class UsersController < ApplicationController
   end
 
   #post sign up account welcome page for user
-
+  post '/signup' do
+    @user = User.create(params)
+    session[:user_id] = @user.id
+    erb :'welcome_user'
+  end
 
   #get request for login page
   get '/sessions/login' do
