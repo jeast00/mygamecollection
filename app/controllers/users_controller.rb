@@ -37,6 +37,16 @@ class UsersController < ApplicationController
     redirect :'/'
   end
 
+  # get request for a delete account page - validate if user wants to delete account
+  # Yes - goes back to main page; No - goes back to users account page
+  get '/delete_account' do
+    erb :delete_account
+  end
+
+  delete '/validate_delete' do
+    current_user.destroy
+    redirect :'/'
+  end
   #add helper methods to check to see if current user and if logged in
   helpers do
     def logged_in?
