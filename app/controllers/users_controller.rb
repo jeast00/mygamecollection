@@ -47,14 +47,5 @@ class UsersController < ApplicationController
     current_user.destroy
     redirect :'/'
   end
-  #add helper methods to check to see if current user and if logged in
-  helpers do
-    def logged_in?
-      !!session[:user_id]
-    end
-
-    def current_user
-      User.find(session[:user_id])
-    end
-  end
+  
 end
