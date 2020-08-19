@@ -16,7 +16,6 @@ ActiveRecord::Schema.define(version: 2020_08_19_164528) do
     t.string "title"
     t.string "company"
     t.string "platform"
-    t.string "rating"
     t.integer "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

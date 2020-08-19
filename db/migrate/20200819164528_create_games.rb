@@ -4,7 +4,6 @@ class CreateGames < ActiveRecord::Migration[5.2]
       t.string :title
       t.string :company
       t.string :platform
-      t.string :rating
       t.integer :user_id
       t.timestamps
     end
