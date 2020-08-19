@@ -1,7 +1,7 @@
 class UsersController < ApplicationController
 
   get '/signup' do
-    erb :signup
+    erb :'signup'
   end
 
   #post sign up account welcome page for user
@@ -40,7 +40,7 @@ class UsersController < ApplicationController
   # get request for a delete account page - validate if user wants to delete account
   # Yes - goes back to main page; No - goes back to users account page
   get '/delete_account' do
-    erb :delete_account
+    erb :'delete_account'
   end
 
   delete '/validate_delete' do
