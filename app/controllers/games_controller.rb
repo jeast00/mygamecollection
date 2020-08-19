@@ -9,9 +9,8 @@ class GamesController < ApplicationController
     erb :'games/new_game'
   end
 
-  post '/games/new_game' do
-    game = current_user.games.build(params)
-    game.save
+  post '/games' do
+    game = current_user.games.create(params)
     redirect '/games'
   end
 end
