@@ -1,6 +1,6 @@
 class GamesController < ApplicationController
 
-  get '/games' do
+  get '/games/show_collection' do
     @games = Game.all
     erb :'games/show_collection'
   end
@@ -9,8 +9,8 @@ class GamesController < ApplicationController
     erb :'games/new_game'
   end
 
-  post '/games' do
+  post '/games/show_collection' do
     game = current_user.games.create(params)
-    redirect '/games'
+    redirect '/games/show_collection'
   end
 end
