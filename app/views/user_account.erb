@@ -1,1 +1,13 @@
-<h1><%= current_user.firstname %>'s Game Collection</h1><hr>
+<h1><%= current_user.firstname %>'s Game Collection</h1><hr><br>
+
+<h3>What would you like to do?</h3>
+
+
+<!-- create links to add a game, see list of added games (collection), delete your account, and logout -->
+
+<div class="linkgroup">
+  <p><a href="/add_game">add a game</a></p>
+  <p><a href="/show_collection">see your collection</a></p>
+  <p><a href="/delete_account">delete your account</a></p>
+  <p><a href="/logout">logout</a></p>
+</div>
