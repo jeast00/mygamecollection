@@ -47,5 +47,5 @@ class UsersController < ApplicationController
     current_user.destroy
     redirect :'/'
   end
-  
+
 end
