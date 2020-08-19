@@ -1,7 +1,12 @@
 <h1><%= current_user.firstname %>'s Game Collection</h1><hr><br>
-<h3>List of games</h3>
+<h3>List of games</h3><br><br>
 <ul>
   <% current_user.games.each do |game| %>
     <li><%= game.title %></li>
   <% end %>
-</ul>
+</ul><br><br>
+
+<a href="/games/new_game">add a game</a>
+<a href="#">edit a game</a>
+<a href="#">delete a game</a>
+<a href="/user_account">go back to account</a>
