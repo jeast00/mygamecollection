@@ -19,7 +19,10 @@ class GamesController < ApplicationController
   end
 
   get '/games/:id' do
-    
+    @game = Game.find(params[:id])
+    erb :'/games/show_game_details'
   end
+
+
 
 end

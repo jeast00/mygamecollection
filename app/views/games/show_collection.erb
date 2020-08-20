@@ -2,10 +2,10 @@
 <h3>List of games</h3><br><br>
 <ul>
   <% current_user.games.each do |game| %>
-    <li><a href="/games/show_game_details/<%= game.id %>" style="text-decoration: none"><%= game.title %></a></li><br>
+    <li><a href="/games/<%= game.id %>" style="text-decoration: none"><%= game.title %></a></li><br>
   <% end %>
 </ul><br><br>
 
 
-<a href="/games/new_game">add a game</a>
-<a href="/user_account">go back to account</a>
+<a href="/games/new_game" style="text-decoration: none">add a game</a>
+<a href="/user_account" style="text-decoration: none">go back to account</a>
