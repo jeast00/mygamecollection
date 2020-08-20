@@ -13,4 +13,10 @@ class GamesController < ApplicationController
     game = current_user.games.create(params)
     redirect '/games/show_collection'
   end
+
+  get '/games/:id' do
+    @game = Game.find(params[:id])
+    erb :'games/show_game_details'
+  end
+
 end
