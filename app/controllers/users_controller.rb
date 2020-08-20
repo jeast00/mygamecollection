@@ -27,9 +27,25 @@ class UsersController < ApplicationController
     end
   end
 
-  get '/user_account' do
-    erb :'user_account'
+  get '/edit_user' do
+    @user = current_user
+    erb :'edit_user'
   end
+
+  # get '/user_account/edit' do
+  #   @user = current_user
+  #   erb :'edit_user'
+  # end
+
+  patch '/user_account' do
+    @user = current_user
+    @user.firstname = params[:firstname]
+    @user.lastname = params[:lastname]
+    @user.save
+    erb :"/user_account"
+  end
+
+
 
   #get request to log out the user
   get '/logout' do

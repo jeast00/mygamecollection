@@ -1,1 +1,10 @@
 <h1><%= current_user.firstname %>'s Game Collection</h1><hr><br>
+
+<h3>Edit user</h3>
+
+<form action="/user_account" method="POST">
+  <input type="hidden" name="_method" value="patch">
+  <input type="text" name="firstname" value="<%= @user.firstname %>" required><br><br>
+  <input type="text" name="lastname" value="<%= @user.lastname %>" required><br><br>
+  <input type="submit" value="edit">
+</form>
