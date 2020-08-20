@@ -3,7 +3,7 @@
 <h3>Edit game details</h3>
 
 <form action="/games/<%= @game.id %>" method="POST">
-  <input type="hidden" name="_method" value="PATCH">
+  <input type="hidden" name="_method" value="patch">
   <label for="title"><strong>Title of game: </strong></label>
   <input type="text" name="title" value="<%= @game.title %>" required><br><br>
   <label for="company"><strong>Company: </strong></label>
