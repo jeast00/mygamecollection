@@ -1,0 +1,10 @@
+<h1><%= current_user.firstname %>'s Game Collection</h1><hr><br>
+
+<h3>Are you sure you want to delete this game from your collection?</h3><br><br>
+
+<form action="/games/<%= @game.id %>" method="POST">
+  <input type="hidden" name="_method" value="DELETE">
+  <input type="submit" value="delete game">
+</form>
+<br><br>
+<a href="/games/show_collection" style="text-decoration: none">go back</a>

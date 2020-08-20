@@ -23,6 +23,11 @@ class GamesController < ApplicationController
     erb :"/games/edit_game_details"
   end
 
+  get '/games/:id/delete_game' do
+    @game = Game.find(params[:id])
+    erb :'/games/delete_game'
+  end
+
   get '/games/:id' do
     @game = Game.find(params[:id])
     erb :'/games/show_game_details'
@@ -34,6 +39,12 @@ class GamesController < ApplicationController
     @game.company = params[:company]
     @game.platform = params[:platform]
     @game.save
+    redirect '/games'
+  end
+
+  delete '/games/:id' do
+    @game = Game.find(params[:id])
+    @game.delete
     redirect '/games'
   end
 
