@@ -1,11 +1,11 @@
 <h1><%= current_user.firstname %>'s Game Collection</h1><hr><br>
 <h3>Fill out this form below to add a game to your collection!</h3><br><br>
 <form action="/games" method="POST">
-  <label for="title">Title of game: </label>
+  <label for="title"><strong>Title of game: </strong></label>
   <input type="text" name="title" required><br><br>
-  <label for="company">Company: (ex. Capcom)</label>
+  <label for="company"><strong>Company: </strong>(ex. Capcom)</label>
   <input type="text" name="company" required><br><br>
-  <label for="platform">Platform: (ex. Playstation)</label>
+  <label for="platform"><strong>Platform: </strong>(ex. Playstation)</label>
   <input type="text" name="platform" required><br><br>
   <input type="submit" value="Add Game">
 </form>

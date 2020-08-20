@@ -1,11 +1,11 @@
 <h1><%= current_user.firstname %>'s Game Collection</h1><hr><br>
 <h3>Game details</h3><br><br>
 
-<label for="title">Title: </label>
+<label for="title"><strong>Title: </strong></label>
 <%= @game.title %><br><br>
-<label for="company">Company: </label>
+<label for="company"><strong>Company: </strong></label>
 <%= @game.company %><br><br>
-<label for="platform">Platform: </label>
+<label for="platform"><strong>Platform: </strong></label>
 <%= @game.platform %><br><br>
 
 <a href="/games/show_collection" style="text-decoration: none">go back</a>
