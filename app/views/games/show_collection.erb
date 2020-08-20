@@ -2,7 +2,7 @@
 <h3>List of games</h3><br><br>
 <ul>
   <% current_user.games.each do |game| %>
-    <li><%= game.title %></li><br>
+    <li><a href="/games/show_game_details/<%= game.id %>" style="text-decoration: none"><%= game.title %></a></li><br>
   <% end %>
 </ul><br><br>
 
