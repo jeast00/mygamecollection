@@ -32,6 +32,10 @@ class UsersController < ApplicationController
     erb :'edit_user'
   end
 
+  get '/user_account' do
+    erb :'user_account'
+  end
+
   # get '/user_account/edit' do
   #   @user = current_user
   #   erb :'edit_user'

@@ -13,14 +13,14 @@
 
   /* --- Welcome Page Styles --- */
   body {
-    background-color: dodgerblue;
+    background-color: #1919a6;
     color: #333;
-    font-family: Sans-Serif;
+    font-family: 'Press Start 2P', cursive, Sans-Serif;
     line-height: 18px;
   }
 
   .wrapper {
-    background: #fff;
+    background: dodgerblue;
     -moz-box-shadow: 0 0 10px rgba(0,0,0,.3);
     -webkit-box-shadow: 0 0 10px rgba(0,0,0,.3);
     box-shadow: 0 0 10px rgba(0,0,0,.3);
@@ -111,6 +111,13 @@
   h2 {
     font-size: 18px;
     line-height: 24px;
+  }
+
+  img {
+    background-image: url('pacman_blank.png');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
   }
 
 }
