@@ -14,4 +14,12 @@ class GamesController < ApplicationController
     redirect '/games'
   end
 
+  get '/games/show_collection' do
+    redirect '/games'
+  end
+
+  get '/games/:id' do
+    
+  end
+
 end
