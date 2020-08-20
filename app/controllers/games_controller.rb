@@ -14,9 +14,4 @@ class GamesController < ApplicationController
     redirect '/games/show_collection'
   end
 
-  get '/games/show_game_details/:id' do
-    @game = Game.find_by_id(params[:id])
-    erb :'/games/show_game_details'
-  end
-
 end
