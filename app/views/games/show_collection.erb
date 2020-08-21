@@ -1,5 +1,5 @@
 <h1><%= current_user.firstname %>'s Game Collection</h1><hr><br>
-<h3>List of games</h3><br><br>
+<h3>List of Games</h3><br><br>
 <ul>
   <% current_user.games.each do |game| %>
     <li><a href="/games/<%= game.id %>" style="text-decoration: none"><%= game.title %></a></li><br>

@@ -33,6 +33,7 @@ class UsersController < ApplicationController
   end
 
   get '/user_account' do
+    @user = current_user
     erb :'user_account'
   end
 
@@ -49,6 +50,9 @@ class UsersController < ApplicationController
     erb :"/user_account"
   end
 
+  get '/validate_logout' do
+    erb :'validate_logout'
+  end
 
 
   #get request to log out the user
