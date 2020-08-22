@@ -41,7 +41,11 @@ class UsersController < ApplicationController
   # get request for a delete account page - validate if user wants to delete account
   # Yes - goes back to main page; No - goes back to users account page
   get '/delete_account' do
-    erb :'delete_account'
+    erb :'/users/delete_account'
+  end
+
+  get 'users/delete_account' do
+    redirect '/delete_account'
   end
 
   delete '/validate_delete' do
