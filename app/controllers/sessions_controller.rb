@@ -12,7 +12,7 @@ class SessionsController < ApplicationController
   post '/signup' do
     @user = User.create(params)
     session[:user_id] = @user.id
-    erb :'welcome_user'
+    erb :'/users/welcome_user'
   end
 
   #get request for login page
@@ -25,7 +25,7 @@ class SessionsController < ApplicationController
     @user = User.find_by(email: params[:email])
     if @user && @user.authenticate(params[:password])
       session[:user_id] = @user.id
-      erb :'welcome_back_user'
+      erb :'/users/welcome_back_user'
     else
       erb :'/sessions/login_error'
     end
