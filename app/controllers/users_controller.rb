@@ -3,7 +3,11 @@ class UsersController < ApplicationController
 
   get '/edit_user' do
     @user = current_user
-    erb :'edit_user'
+    erb :'/users/edit_user'
+  end
+
+  get '/users/edit_user' do
+    redirect '/edit_user'
   end
 
   get '/user_account' do
