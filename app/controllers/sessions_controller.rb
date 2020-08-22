@@ -1,7 +1,11 @@
 class SessionsController < ApplicationController
 
   get '/signup' do
-    erb :'signup'
+    erb :'/sessions/signup'
+  end
+
+  get '/sessions/signup' do
+    redirect '/signup'
   end
 
   #post sign up account welcome page for user
@@ -23,7 +27,7 @@ class SessionsController < ApplicationController
       session[:user_id] = @user.id
       erb :'welcome_back_user'
     else
-      erb :'login_error'
+      erb :'/sessions/login_error'
     end
   end
 
