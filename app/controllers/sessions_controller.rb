@@ -10,9 +10,9 @@ class SessionsController < ApplicationController
 
   #post sign up account welcome page for user
   post '/signup' do
-    @user = User.create(params)
-    session[:user_id] = @user.id
-    erb :'/users/welcome_user'
+      @user = User.create(params)
+      session[:user_id] = @user.id
+      erb :'/users/welcome_user'
   end
 
   #get request for login page
