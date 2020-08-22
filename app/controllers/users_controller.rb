@@ -28,9 +28,12 @@ class UsersController < ApplicationController
   end
 
   get '/validate_logout' do
-    erb :'validate_logout'
+    erb :'/users/validate_logout'
   end
 
+  get '/users/validate_logout' do
+    redirect '/validate_logout'
+  end
 
   #get request to log out the user
   get '/logout' do
