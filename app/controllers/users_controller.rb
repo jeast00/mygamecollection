@@ -8,7 +8,11 @@ class UsersController < ApplicationController
 
   get '/user_account' do
     @user = current_user
-    erb :'user_account'
+    erb :'/users/user_account'
+  end
+
+  get '/users/user_account' do
+    redirect '/user_account'
   end
 
   patch '/user_account' do
@@ -16,7 +20,7 @@ class UsersController < ApplicationController
     @user.firstname = params[:firstname]
     @user.lastname = params[:lastname]
     @user.save
-    erb :"/user_account"
+    redirect '/user_account'
   end
 
   get '/validate_logout' do
@@ -27,7 +31,7 @@ class UsersController < ApplicationController
   #get request to log out the user
   get '/logout' do
     session.clear
-    redirect :'/'
+    redirect '/'
   end
 
   # get request for a delete account page - validate if user wants to delete account
@@ -38,7 +42,7 @@ class UsersController < ApplicationController
 
   delete '/validate_delete' do
     current_user.destroy
-    redirect :'/'
+    redirect '/'
   end
 
 end
